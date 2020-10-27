@@ -10,16 +10,14 @@ class Node:
         self.right = None
   
 # Finds the path from root node to given root of the tree. 
-# Stores the path in a list path[], returns true if path  
-# exists otherwise false 
+# Stores the path in a list path[], returns true if path exists otherwise false 
 def findPath( root, path, k): 
   
-    # Baes Case 
+    # Base Case 
     if root is None: 
         return False
   
-    # Store this node is path vector. The node will be 
-    # removed if not in path from root to k 
+    # Store this node is path vector. The node will be removed if not in path from root to k 
     path.append(root.key) 
   
     # See if the k is same as root's key 
@@ -31,14 +29,12 @@ def findPath( root, path, k):
             (root.right!= None and findPath(root.right, path, k))): 
         return True 
   
-    # If not present in subtree rooted with root, remove 
-    # root from path and return False 
+    # If not present in subtree rooted with root, remove root from path and return False 
        
     path.pop() 
     return False
   
-# Returns LCA if node n1 , n2 are present in the given 
-# binary tre otherwise return -1 
+# Returns LCA if node n1 , n2 are present in the given binary tre otherwise return -1 
 def findLCA(root, n1, n2): 
   
     # To store paths to n1 and n2 fromthe root 
@@ -60,7 +56,7 @@ def findLCA(root, n1, n2):
   
   
 # Driver program to test above function 
-# Let's create the Binary Tree shown in above diagram 
+# Create the Binary Tree 
 root = Node(1) 
 root.left = Node(2) 
 root.right = Node(3) 
@@ -69,7 +65,9 @@ root.left.right = Node(5)
 root.right.left = Node(6) 
 root.right.right = Node(7) 
   
-print ("LCA(4, 5) = %d" %(findLCA(root, 4, 5,)) )
-print ("LCA(4, 6) = %d" %(findLCA(root, 4, 6)) )
-print ("LCA(3, 4) = %d" %(findLCA(root,3,4)) )
-print ("LCA(2, 4) = %d" %(findLCA(root,2, 4)) )
+print ("LCA(4, 5) = %d" %(findLCA(root, 4, 5)) )
+print ("LCA(6, 2) = %d" %(findLCA(root, 6, 2)) )
+print ("LCA(1, 1) = %d" %(findLCA(root, 1, 1)) )
+print ("LCA(2, 3) = %d" %(findLCA(root, 2, 3)) )
+print ("LCA(6, 7) = %d" %(findLCA(root, 6, 7)) )
+print ("LCA(8, 8) = %d" %(findLCA(root, 8, 8)) )

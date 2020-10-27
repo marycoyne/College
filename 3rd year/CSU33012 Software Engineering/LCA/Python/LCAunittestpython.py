@@ -9,12 +9,6 @@ class LCAunittestpython(unittest.TestCase):
     def test_node6_2(self):
         self.assertEqual(Node.findLCA(Node.root, 6, 2).key, 1)
 
-    def test_node_none(self):
-        self.assertEqual(Node.findLCA(None, 4, 5), None)
-
-    def test_node1_5(self):
-        self.assertEqual(Node.findLCA(Node.root, 1, 5).key, 1)
-
     def test_node_same(self):
         self.assertEqual(Node.findLCA(Node.root, 1, 1).key, 1)
 

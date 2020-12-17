@@ -1,4 +1,7 @@
-Interrogate the GitHub API to retrieve and display data regarding the logged in developer. See https://github.com/phadej/github.
+Interrogate the GitHub API to retrieve and display data regarding the logged in developer. 
+
+ 
+https://github.com/phadej/github.
 https://github.com/PyGithub/PyGithub#install
 https://github.com/esjmb/github-get#readme
 https://www.thepythoncode.com/article/using-github-api-in-python 

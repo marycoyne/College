@@ -2,8 +2,6 @@
 #pip3 install PyGithub requests
 import base64
 from github import Github
-from pprint import pprint
-
 import requests
 from pprint import pprint
 
